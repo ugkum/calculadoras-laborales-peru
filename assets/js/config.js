@@ -3,7 +3,7 @@ export const CONFIG = {
   siteUrl: "https://calculadoras-laborales-peru.pages.dev",
   updatedAt: "2026-10-16",
   brand: "Ugkum Innova",
-  whatsappNumber: "",
+  whatsappNumber: "51948684660",
   contactEmail: "",
   values: {
     familyAllowanceRate: 0.10,
