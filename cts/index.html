@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de CTS 2026 Perú: calcula tu depósito gratis</title>
+  <meta name="description" content="Calcula gratis tu CTS de mayo o noviembre en Perú. Incluye sueldo, asignación familiar, sexto de gratificación y meses y días trabajados.">
+  <meta name="theme-color" content="#f4f6f0">
+  <link rel="canonical" href="https://calculadoras-laborales.pages.dev/cts/">
+  <meta property="og:type" content="website"><meta property="og:title" content="Calculadora CTS 2026 Perú | Laboral Claro"><meta property="og:description" content="Estima tu depósito CTS con meses y días computables."><meta property="og:url" content="https://calculadoras-laborales.pages.dev/cts/">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script type="module" src="../assets/js/app.js"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuándo depositan la CTS en Perú?","acceptedAnswer":{"@type":"Answer","text":"En el régimen general, el depósito se realiza dentro de los primeros quince días de mayo y noviembre, por los periodos semestrales correspondientes."}},{"@type":"Question","name":"¿Qué conceptos entran en el cálculo de la CTS?","acceptedAnswer":{"@type":"Answer","text":"Se considera la remuneración computable, que puede incluir sueldo, asignación familiar si corresponde y un sexto de la gratificación del semestre anterior. Los conceptos variables requieren revisar su regularidad."}},{"@type":"Question","name":"¿Cómo se cuentan los días de CTS?","acceptedAnswer":{"@type":"Answer","text":"La estimación convierte los días computables en fracciones de un mes laboral de 30 días y presenta por separado los meses y días resultantes."}},{"@type":"Question","name":"¿La calculadora sirve para una microempresa?","acceptedAnswer":{"@type":"Answer","text":"No necesariamente. Esta página estima el régimen general privado; las reglas de micro y pequeña empresa, construcción civil, trabajo agrario u otros regímenes pueden variar."}}]}
+  </script>
+</head>
+<body data-page="calculator" data-calculator="cts">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../" aria-label="Laboral Claro Perú, inicio"><span class="brand-mark">LC</span><span>Laboral Claro <strong>Perú</strong></span></a><nav class="main-nav" aria-label="Navegación principal"><a href="../">Calculadoras</a><a class="active" href="./">CTS</a><a href="../gratificaciones/">Gratificaciones</a><a href="../vacaciones/">Vacaciones</a></nav></div></header>
+  <main id="contenido" class="wrap page-wrap">
+    <div class="breadcrumbs"><a href="../">Inicio</a><span aria-hidden="true">/</span><span>CTS</span></div>
+    <section class="page-intro"><p class="eyebrow">Calculadora laboral 01</p><h1>Calculadora de CTS <span>2026</span></h1><p>Estima cuánto te corresponde por el depósito de mayo o noviembre. El cálculo muestra los meses y días computables.</p><p class="referential"><strong>Cálculo referencial, no reemplaza asesoría legal.</strong></p></section>
+    <div class="calculator-layout">
+      <section class="calculator-panel" aria-labelledby="form-title"><div class="panel-heading"><div><p class="eyebrow">Régimen general privado</p><h2 id="form-title">Datos para el cálculo</h2></div><span class="step-mark">01</span></div>
+        <form id="cts-form" novalidate>
+          <div class="form-grid">
+            <label class="field"><span>Sueldo mensual bruto</span><span class="input-wrap"><span class="currency">S/</span><input name="salary" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00" required></span></label>
+            <label class="field"><span>Depósito que quieres estimar</span><select name="cycle"><option value="noviembre">Noviembre</option><option value="mayo">Mayo</option></select></label>
+            <label class="field"><span>Año del depósito</span><input name="year" type="number" min="2025" max="2035" value="2026" required></label>
+            <label class="field"><span>Fecha de ingreso</span><input name="hireDate" type="date" required></label>
+            <label class="field"><span>Otros conceptos mensuales remunerativos</span><span class="input-wrap"><span class="currency">S/</span><input name="otherMonthly" type="number" min="0" step="0.01" inputmode="decimal" value="0"></span><small>Solo conceptos fijos que forman parte de tu remuneración.</small></label>
+            <label class="field"><span>Última gratificación pagada (sin bonificación)</span><span class="input-wrap"><span class="currency">S/</span><input name="lastGratification" type="number" min="0" step="0.01" inputmode="decimal" value="0"></span><small>Se incorpora un sexto al sueldo computable.</small></label>
+          </div>
+          <label class="check-field"><input name="familyAllowance" type="checkbox"><span><strong>Me corresponde asignación familiar</strong><small>Se añade el <span data-family-rate>10%</span> de la RMV vigente al cierre del periodo.</small></span></label>
+          <label class="check-field"><input name="eligible" type="checkbox" checked><span><strong>Trabajo en promedio 4 horas o más al día</strong><small>La calculadora asume que estás en el régimen general privado.</small></span></label>
+          <div class="period-note"><span class="period-label">Periodo computable</span><strong id="period-display">1 de mayo al 31 de octubre de 2026</strong><input type="hidden" name="periodStart"><input type="hidden" name="periodEnd"></div>
+          <p class="form-error" id="cts-error" role="alert" hidden></p>
+          <button class="button button-primary submit-button" type="submit">Calcular mi CTS <span aria-hidden="true">→</span></button>
+          <p class="privacy-note">Los datos se calculan en tu navegador y no se envían ni guardan.</p>
+        </form>
+      </section>
+      <aside class="result-panel" id="cts-result" aria-live="polite" hidden>
+        <div class="result-topline"><span>Estimación referencial</span><span class="result-status">CTS</span></div><p class="result-label">Tu CTS estimada</p><strong class="result-total" data-result-total>S/ 0.00</strong><p class="result-subtitle" data-result-subtitle>Desglose calculado para el periodo elegido</p>
+        <div class="result-breakdown" data-result-breakdown></div>
+        <p class="result-note" data-result-note></p>
+        <div class="result-actions"><button class="button button-outline" type="button" data-print-result>Guardar en PDF</button><a class="button button-text" data-whatsapp href="https://wa.me/?text=Hola%2C%20quiero%20consultar%20mi%20resultado%20de%20CTS" target="_blank" rel="noopener">Solicitar PDF premium S/ 3 <span aria-hidden="true">↗</span></a></div>
+        <p class="premium-note">Pago por Yape o Plin coordinado por WhatsApp. No se procesa ningún pago en este sitio.</p>
+        <p class="print-brand">Laboral Claro Perú · Ugkum Innova · laborálclaro.pe</p>
+      </aside>
+    </div>
+
+    <div class="ad-slot ad-slot-inline" aria-label="Espacio reservado para publicidad"><span>Espacio publicitario</span></div>
+
+    <article class="article-content">
+      <p class="eyebrow">Guía actualizada <span data-updated-at>16 oct. 2026</span></p>
+      <h2>Cómo calcular la CTS en Perú en 2026</h2>
+      <p>La Compensación por Tiempo de Servicios (CTS) es un beneficio laboral pensado como respaldo cuando termina la relación de trabajo. Para trabajadores del régimen general de la actividad privada, el empleador deposita la CTS dos veces al año: en mayo y noviembre. El depósito de mayo corresponde al periodo de noviembre a abril; el de noviembre, al periodo de mayo a octubre. Como regla general, el depósito debe efectuarse dentro de los primeros quince días calendario de esos meses.</p>
+      <h3>Qué sueldo se considera</h3>
+      <p>La base no siempre es solo el sueldo que aparece en tu contrato. La remuneración computable puede incluir conceptos remunerativos regulares, la asignación familiar cuando corresponde y un sexto de la gratificación del semestre anterior. Por eso la calculadora pide el monto de la última gratificación sin sumar su bonificación extraordinaria. Si recibes comisiones u otros pagos variables, la forma de promediarlos depende de su frecuencia y regularidad; conviene revisar tus boletas y el detalle oficial antes de tomar una decisión.</p>
+      <h3>Meses y días computables</h3>
+      <p>Por cada mes completo del semestre se estima una doceava parte de la remuneración computable. Si el tiempo trabajado no completa un mes, los días se expresan como fracción de treinta: un día equivale a una treintava parte de una doceava. La pantalla del resultado separa sueldo, asignación familiar, sexto de gratificación, remuneración computable y tiempo reconocido. La fecha de ingreso limita el periodo considerado; si laboraste durante todo el semestre, se mostrarán seis meses completos.</p>
+      <p>Para participar del régimen general de CTS normalmente se requiere una jornada promedio mínima de cuatro horas diarias. También pueden existir exclusiones o reglas distintas para determinados trabajadores. El monto puede variar si tu empleador está inscrito en REMYPE y te corresponde el régimen de micro o pequeña empresa, o si trabajas en construcción civil, el sector agrario u otra actividad con reglas especiales. La calculadora no determina tu régimen: parte del supuesto general para que tengas una referencia inicial.</p>
+      <h3>Asignación familiar y valores vigentes</h3>
+      <p>Si cumples los requisitos de asignación familiar, esta equivale al <span data-family-rate>10%</span> de la remuneración mínima vital. En 2026 la RMV fue <span data-rmv-at="2026-09-30">S/ 1,130</span> hasta el 30 de setiembre y pasó a <span data-rmv-at="2026-10-01">S/ 1,230</span> desde el 1 de octubre, según el D.S. 015-2026-TR. La herramienta toma el valor vigente al cierre del semestre elegido; no cambia el sueldo que tú ingresas. Los valores y porcentajes se guardan en un solo archivo de configuración para facilitar futuras actualizaciones.</p>
+      <h3>Cómo leer el resultado</h3>
+      <p>El monto mostrado es una estimación bruta y no descuenta saldos o depósitos que ya haya realizado la empresa. Compara el desglose con tu boleta, el certificado de depósito bancario y las fechas reales de trabajo. El Ministerio de Trabajo también ofrece su herramienta referencial para calcular beneficios sociales del régimen general. Si existe una diferencia importante, una fecha discutida, una suspensión o un régimen especial, solicita la revisión de un profesional o consulta directamente con el MTPE o SUNAFIL. Esta página no sustituye la revisión de documentos ni una asesoría legal.</p>
+      <p class="source-line"><strong>Normas y fuentes:</strong> <a href="https://www.leyes.congreso.gob.pe/Documentos/DecretosLegislativos/00650.pdf" target="_blank" rel="noopener">D. Leg. 650</a> y su TUO aprobado por D.S. 001-97-TR; D.S. 004-97-TR; <a href="https://www.gob.pe/72288-calcular-la-liquidacion-de-beneficios-sociales-para-trabajadores-del-sector-privado" target="_blank" rel="noopener">herramienta referencial del MTPE</a>; <a href="https://busquedas.elperuano.pe/dispositivo/EX/2559163-1" target="_blank" rel="noopener">D.S. 015-2026-TR</a>.</p>
+    </article>
+
+    <section class="faq-section" aria-labelledby="faq-title"><p class="eyebrow">Respuestas directas</p><h2 id="faq-title">Preguntas frecuentes sobre CTS</h2>
+      <details><summary>¿Cuándo depositan la CTS?</summary><p>En el régimen general, el depósito se realiza dentro de los primeros quince días de mayo y noviembre. Si la fecha límite coincide con un día no laborable, revisa las reglas aplicables y la comunicación de tu empleador.</p></details>
+      <details><summary>¿Qué conceptos entran en el cálculo?</summary><p>Puede incluir el sueldo, la asignación familiar si te corresponde, conceptos remunerativos regulares y un sexto de la gratificación anterior. Los pagos variables requieren revisar su regularidad y el periodo en que se percibieron.</p></details>
+      <details><summary>¿Cómo se cuentan los días?</summary><p>La estimación usa la convención laboral de 30 días por mes y presenta por separado la fracción de meses y días. Por eso una fracción de 15 días equivale a medio mes.</p></details>
+      <details><summary>¿La calculadora sirve para microempresas?</summary><p>Esta página asume el régimen general. Si tu empresa está inscrita en REMYPE o perteneces a un régimen especial, tus beneficios pueden ser distintos.</p></details>
+    </section>
+    <section class="next-tools"><div><p class="eyebrow">También puedes calcular</p><h2>Continúa con otro beneficio</h2></div><div class="next-tool-links"><a class="tool-mini" href="../gratificaciones/"><span>02</span><strong>Gratificaciones</strong><span aria-hidden="true">→</span></a><a class="tool-mini" href="../vacaciones/"><span>03</span><strong>Vacaciones</strong><span aria-hidden="true">→</span></a></div></section>
+    <section class="help-band help-band-small"><div class="help-inner"><div><p class="eyebrow">¿Necesitas revisar tu caso?</p><h2>Habla con un contador o abogado laboral.</h2></div><a class="button button-dark" data-whatsapp href="https://wa.me/?text=Hola%2C%20quiero%20orientaci%C3%B3n%20laboral%20sobre%20CTS" target="_blank" rel="noopener">Consultar por WhatsApp <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-main"><div><a class="brand brand-footer" href="../"><span class="brand-mark">LC</span><span>Laboral Claro <strong>Perú</strong></span></a><p>Calculadora referencial. Tus datos no se guardan.</p></div><div class="footer-links"><a href="../">Inicio</a><a href="../gratificaciones/">Gratificaciones</a><a href="../vacaciones/">Vacaciones</a><a href="../privacidad/">Privacidad</a><a href="../terminos/">Términos</a><a href="../contacto/">Contacto</a></div></div><div class="wrap footer-bottom"><span>© <span data-current-year>2026</span> Laboral Claro Perú</span><span>Ugkum Innova · reportes en Excel, Power BI y sistemas a medida.</span></div></footer>
+</body>
+</html>

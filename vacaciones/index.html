@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de vacaciones 2026 Perú: gozadas, truncas y no gozadas</title>
+  <meta name="description" content="Calcula gratis tus vacaciones gozadas, truncas o no gozadas en Perú. Mira el pago estimado y el desglose con reglas del régimen general.">
+  <meta name="theme-color" content="#f4f6f0">
+  <link rel="canonical" href="https://calculadoras-laborales.pages.dev/vacaciones/">
+  <meta property="og:type" content="website"><meta property="og:title" content="Calculadora de vacaciones 2026 Perú | Laboral Claro"><meta property="og:description" content="Estima tus vacaciones gozadas, truncas y no gozadas con un desglose claro."><meta property="og:url" content="https://calculadoras-laborales.pages.dev/vacaciones/">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script type="module" src="../assets/js/app.js"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuántos días de vacaciones corresponden en el régimen general?","acceptedAnswer":{"@type":"Answer","text":"Corresponden 30 días calendario por cada año completo de servicios, siempre que se cumpla el récord vacacional exigido según la jornada semanal."}},{"@type":"Question","name":"¿Cómo se calculan las vacaciones truncas?","acceptedAnswer":{"@type":"Answer","text":"Al cese antes de completar un nuevo año, se estima la parte proporcional por meses y días desde el último aniversario laboral. Para esta referencia se exige al menos un mes de servicios."}},{"@type":"Question","name":"¿Qué pasa si no tomé mis vacaciones a tiempo?","acceptedAnswer":{"@type":"Answer","text":"Si vence el plazo legal para disfrutar el descanso, puede corresponder la remuneración vacacional pendiente y una indemnización equivalente a una remuneración. El sueldo ordinario por el trabajo realizado no se vuelve a sumar."}},{"@type":"Question","name":"¿La calculadora incluye suspensiones o pagos variables?","acceptedAnswer":{"@type":"Answer","text":"No. La estimación asume el régimen general, remuneración mensual fija y continuidad de servicios. Suspensiones, conceptos variables, pagos anteriores y regímenes especiales requieren revisión individual."}}]}
+  </script>
+</head>
+<body data-page="calculator" data-calculator="vacation">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../" aria-label="Laboral Claro Perú, inicio"><span class="brand-mark">LC</span><span>Laboral Claro <strong>Perú</strong></span></a><nav class="main-nav" aria-label="Navegación principal"><a href="../">Calculadoras</a><a href="../cts/">CTS</a><a href="../gratificaciones/">Gratificaciones</a></nav></div></header>
+  <main id="contenido" class="wrap page-wrap">
+    <div class="breadcrumbs"><a href="../">Inicio</a><span aria-hidden="true">/</span><span>Vacaciones</span></div>
+    <section class="page-intro"><p class="eyebrow">Calculadora laboral 03</p><h1>Calculadora de vacaciones <span>2026</span></h1><p>Estima la remuneración por descanso, vacaciones truncas o el pago de un periodo no gozado.</p><p class="referential"><strong>Cálculo referencial, no reemplaza asesoría legal.</strong></p></section>
+    <div class="calculator-layout">
+      <section class="calculator-panel" aria-labelledby="form-title"><div class="panel-heading"><div><p class="eyebrow">Régimen general privado</p><h2 id="form-title">Datos para el cálculo</h2></div><span class="step-mark">03</span></div>
+        <form id="vacation-form" novalidate>
+          <fieldset class="segmented-control"><legend>Modalidad</legend><label><input type="radio" name="mode" value="gozadas" checked><span>Gozadas</span></label><label><input type="radio" name="mode" value="truncas"><span>Truncas</span></label><label><input type="radio" name="mode" value="no-gozadas"><span>No gozadas</span></label></fieldset>
+          <div class="form-grid vacation-shared-fields">
+            <label class="field"><span>Sueldo mensual bruto</span><span class="input-wrap"><span class="currency">S/</span><input name="salary" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00" required></span></label>
+            <label class="field"><span>Otros conceptos mensuales remunerativos</span><span class="input-wrap"><span class="currency">S/</span><input name="otherMonthly" type="number" min="0" step="0.01" inputmode="decimal" value="0"></span><small>Solo conceptos fijos que forman parte de tu remuneración.</small></label>
+          </div>
+          <label class="check-field"><input name="familyAllowance" type="checkbox"><span><strong>Me corresponde asignación familiar</strong><small>Se suma el <span data-family-rate>10%</span> de la RMV vigente en la fecha de referencia.</small></span></label>
+          <fieldset class="mode-fields" data-mode-fields="gozadas">
+            <legend>Descanso vacacional</legend><div class="form-grid"><label class="field"><span>Días de descanso</span><input name="vacationDays" type="number" min="1" max="30" step="1" value="30" required></label><label class="field"><span>Fecha de inicio del descanso</span><input name="vacationStartDate" type="date" required></label></div>
+          </fieldset>
+          <fieldset class="mode-fields" data-mode-fields="truncas" hidden disabled>
+            <legend>Periodo trabajado</legend><div class="form-grid"><label class="field"><span>Fecha de ingreso</span><input name="hireDate" type="date" required></label><label class="field"><span>Fecha de cese</span><input name="cessationDate" type="date" required></label></div><small>Se asume que los periodos vacacionales completos anteriores ya fueron gozados o pagados.</small>
+          </fieldset>
+          <fieldset class="mode-fields" data-mode-fields="no-gozadas" hidden disabled>
+            <legend>Periodo pendiente</legend><div class="form-grid"><label class="field"><span>Fecha en que cumpliste el año de servicios</span><input name="entitlementDate" type="date" required></label><label class="field"><span>Fecha de cese o consulta</span><input name="asOfDate" type="date" required></label></div><label class="check-field"><input name="vacationPayPending" type="checkbox" checked><span><strong>La remuneración vacacional sigue pendiente de pago</strong><small>Si ya te pagaron ese concepto, deja la casilla desmarcada.</small></span></label></fieldset>
+          <p class="mode-guidance" id="vacation-guidance" aria-live="polite">Estimación bruta para los días de descanso indicados; no es un pago adicional al sueldo anual.</p>
+          <p class="form-error" id="vacation-error" role="alert" hidden></p>
+          <button class="button button-primary submit-button" type="submit">Calcular vacaciones <span aria-hidden="true">→</span></button>
+          <p class="privacy-note">Los datos se calculan en tu navegador y no se envían ni guardan.</p>
+        </form>
+      </section>
+      <aside class="result-panel" id="vacation-result" aria-live="polite" hidden>
+        <div class="result-topline"><span>Estimación referencial</span><span class="result-status">Vacaciones</span></div><p class="result-label">Total bruto estimado</p><strong class="result-total" data-result-total>S/ 0.00</strong><p class="result-subtitle" data-result-subtitle>Desglose del cálculo</p>
+        <div class="result-breakdown" data-result-breakdown></div>
+        <p class="result-note" data-result-note></p>
+        <div class="result-actions"><button class="button button-outline" type="button" data-print-result>Guardar en PDF</button><a class="button button-text" data-whatsapp href="https://wa.me/?text=Hola%2C%20quiero%20consultar%20mi%20resultado%20de%20vacaciones" target="_blank" rel="noopener">Solicitar PDF premium S/ 3 <span aria-hidden="true">↗</span></a></div>
+        <p class="premium-note">Pago por Yape o Plin coordinado por WhatsApp. No se procesa ningún pago en este sitio.</p><p class="print-brand">Laboral Claro Perú · Ugkum Innova</p>
+      </aside>
+    </div>
+
+    <div class="ad-slot ad-slot-inline" aria-label="Espacio reservado para publicidad"><span>Espacio publicitario</span></div>
+
+    <article class="article-content">
+      <p class="eyebrow">Guía actualizada <span data-updated-at>16 oct. 2026</span></p>
+      <h2>Vacaciones laborales en Perú: cálculo de gozadas, truncas y no gozadas</h2>
+      <p>En el régimen general privado, el descanso vacacional anual es de 30 días calendario por cada año completo de servicios, siempre que la persona trabajadora cumpla el récord exigido. El récord depende de la jornada: por regla general, se deben haber laborado al menos 260 días si se trabaja seis días por semana o 210 días si se trabaja cinco. Si la jornada ordinaria es de tres o cuatro días semanales, también se revisa el límite de inasistencias injustificadas. Esta calculadora no determina el récord; supone que se cumplió y que no hubo suspensiones que alteren el periodo.</p>
+      <h3>Vacaciones gozadas</h3>
+      <p>La remuneración vacacional equivale a la remuneración que la persona habría recibido habitualmente si continuaba trabajando. Se paga antes de iniciar el descanso. Para un sueldo mensual fijo, 30 días de descanso corresponden a una remuneración mensual; un descanso menor se estima en proporción a los días indicados. La asignación familiar y otros conceptos regulares pueden formar parte de la base cuando corresponden. La herramienta muestra el monto bruto asociado al descanso: no es un bono extra sobre el sueldo anual y no descuenta AFP, ONP ni renta.</p>
+      <h3>Vacaciones truncas al cese</h3>
+      <p>Si el vínculo termina antes de completar otro año vacacional, puede corresponder una compensación proporcional por el tiempo trabajado desde el último aniversario. La estimación convierte cada mes completo en una doceava parte de la remuneración computable y cada día restante en una treintava de esa fracción. Para esta referencia se exige al menos un mes de servicios. Si ya se completó uno o más años, se asume que los descansos anteriores fueron utilizados o pagados y se calcula solo el periodo pendiente. Revisa fechas de ingreso y cese, porque un cambio de un día puede modificar los meses o días considerados.</p>
+      <h3>Vacaciones no gozadas e indemnización</h3>
+      <p>El descanso debe disfrutarse dentro del año siguiente a aquel en que se adquiere el derecho. Si vence ese plazo sin goce, la ley contempla el pago de la remuneración vacacional no disfrutada y una indemnización equivalente a una remuneración. A veces se le llama “triple vacacional” porque también se cuenta el sueldo ordinario por el trabajo realizado durante el año; ese sueldo normalmente ya fue pagado en planilla. Por eso esta calculadora no lo vuelve a sumar y presenta por separado la remuneración vacacional que aún esté pendiente y la indemnización, si el plazo ya venció.</p>
+      <p>El resultado de vacaciones truncas o no gozadas depende de fechas, remuneración y pagos previos. Si hubo varios periodos pendientes, suspensiones, remuneración variable, jornada parcial, convenio colectivo o un régimen especial, calcula cada periodo con documentos y revisión profesional. Micro y pequeña empresa, construcción civil, trabajo agrario y otros regímenes pueden tener reglas distintas. Esta página usa como supuesto el régimen general de la actividad privada.</p>
+      <p>Las operaciones se realizan en tu navegador. El resultado es una referencia bruta y no una liquidación oficial. Contrasta el cálculo con tus boletas, constancias de descanso, contrato y fecha efectiva de cese. El MTPE también publica una calculadora referencial de beneficios sociales; el propio portal indica que esa herramienta se diseñó con normativa vigente a septiembre de 2024, por lo que conviene revisar cambios posteriores y consultar a la autoridad o a un especialista cuando el caso no sea estándar.</p>
+      <p class="source-line"><strong>Normas y fuentes:</strong> <a href="https://www.leyes.congreso.gob.pe/Documentos/DecretosLegislativos/00713.pdf" target="_blank" rel="noopener">D. Leg. 713</a>; D.S. 012-92-TR, reglamento sobre descansos remunerados; <a href="https://www.gob.pe/72288-calcular-la-liquidacion-de-beneficios-sociales-para-trabajadores-del-sector-privado" target="_blank" rel="noopener">calculadora referencial del MTPE</a>.</p>
+    </article>
+
+    <section class="faq-section" aria-labelledby="faq-title"><p class="eyebrow">Respuestas directas</p><h2 id="faq-title">Preguntas frecuentes sobre vacaciones</h2>
+      <details><summary>¿Cuántos días de vacaciones corresponden?</summary><p>En el régimen general corresponden 30 días calendario por año completo, si se cumple el récord vacacional de acuerdo con la jornada semanal.</p></details>
+      <details><summary>¿Cómo se calculan las vacaciones truncas?</summary><p>Se calcula la parte proporcional por meses y días trabajados desde el último aniversario hasta el cese. Esta referencia requiere al menos un mes de servicios.</p></details>
+      <details><summary>¿Qué pasa si venció el plazo y no tomé vacaciones?</summary><p>Puede corresponder la remuneración vacacional que siga pendiente más una indemnización equivalente a una remuneración. El sueldo por el trabajo realizado normalmente ya está pagado y no se suma otra vez.</p></details>
+      <details><summary>¿La calculadora contempla suspensiones y pagos variables?</summary><p>No. Asume continuidad de servicios y remuneración mensual fija. Si hubo suspensiones, pagos anteriores o un régimen especial, solicita una revisión individual.</p></details>
+    </section>
+    <section class="next-tools"><div><p class="eyebrow">También puedes calcular</p><h2>Continúa con otro beneficio</h2></div><div class="next-tool-links"><a class="tool-mini" href="../cts/"><span>01</span><strong>CTS</strong><span aria-hidden="true">→</span></a><a class="tool-mini" href="../gratificaciones/"><span>02</span><strong>Gratificaciones</strong><span aria-hidden="true">→</span></a></div></section>
+    <section class="help-band help-band-small"><div class="help-inner"><div><p class="eyebrow">¿Necesitas revisar tu caso?</p><h2>Habla con un contador o abogado laboral.</h2></div><a class="button button-dark" data-whatsapp href="https://wa.me/?text=Hola%2C%20quiero%20orientaci%C3%B3n%20laboral%20sobre%20vacaciones" target="_blank" rel="noopener">Consultar por WhatsApp <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-main"><div><a class="brand brand-footer" href="../"><span class="brand-mark">LC</span><span>Laboral Claro <strong>Perú</strong></span></a><p>Calculadora referencial. Tus datos no se guardan.</p></div><div class="footer-links"><a href="../">Inicio</a><a href="../cts/">CTS</a><a href="../gratificaciones/">Gratificaciones</a><a href="../privacidad/">Privacidad</a><a href="../terminos/">Términos</a><a href="../contacto/">Contacto</a></div></div><div class="wrap footer-bottom"><span>© <span data-current-year>2026</span> Laboral Claro Perú</span><span>Ugkum Innova · reportes en Excel, Power BI y sistemas a medida.</span></div></footer>
+</body>
+</html>

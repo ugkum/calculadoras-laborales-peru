@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://calculadoras-laborales.pages.dev/sitemap.xml
